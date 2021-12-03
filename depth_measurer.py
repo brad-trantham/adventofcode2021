@@ -5,14 +5,16 @@ def read_inputs():
     data = [int(x) for x in data]
     return data
 
-if __name__ == "__main__":
-    # get inputs
-    measurements = read_inputs()
 
+def calculate_depth_changes(measurements):
     count = 0
 
-    for i in range(len(measurements) -1):
-        if measurements[i+1] > measurements[i]:
+    for i in range(len(measurements) - 1):
+        if measurements[i + 1] > measurements[i]:
             count = count + 1
 
     print(count)
+
+if __name__ == "__main__":
+    measurements = read_inputs()
+    calculate_depth_changes(measurements)
