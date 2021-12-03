@@ -13,15 +13,17 @@ def read_inputs(input_file):
 def pilot(input):
     horiz_pos = 0
     depth = 0
+    aim = 0
 
     for cmd in input:
         entry = cmd[0]
         if "forward" == entry:
             horiz_pos = horiz_pos + cmd[1]
+            depth = depth + (aim * cmd[1])
         if "down" == entry:
-            depth = depth + cmd[1]
+            aim = aim + cmd[1]
         if "up" == entry:
-            depth = depth - cmd[1]
+            aim = aim - cmd[1]
 
     return horiz_pos, depth
 

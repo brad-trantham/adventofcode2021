@@ -7,7 +7,7 @@ class PilotTest(unittest.TestCase):
         input_file = "/Users/brad/github/advent2021/input2_small.txt"
         input = pilot.read_inputs(input_file)
         horiz_pos, depth = pilot.pilot(input)
-        self.assertEqual(150, horiz_pos*depth)
+        self.assertEqual(900, horiz_pos*depth)
 
 
 if __name__ == '__main__':
